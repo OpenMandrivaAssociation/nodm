@@ -1,0 +1,12 @@
+diff -ru a/configure.ac b/configure.ac
+--- a/configure.ac	2009-07-26 20:39:22.000000000 +0200
++++ b/configure.ac	2010-02-14 13:20:27.000000000 +0100
+@@ -23,7 +23,7 @@
+ )
+ 
+ AC_CHECK_LIB(pam_misc, main,
+-	[ PAM_LIBS="$LIBPAM -lpam_misc" ],
++	[ PAM_LIBS="$PAM_LIBS -lpam_misc" ],
+ 	AC_MSG_ERROR(libpam_misc is missing)
+ )
+ AC_SUBST(PAM_LIBS)
