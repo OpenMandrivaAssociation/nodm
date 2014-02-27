@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING README
 %{_sbindir}/%{name}
-%config(noreplace) %{_sysconfdir}/pam.d/%{name}
+%{_sysconfdir}/pam.d/%{name}
 %{_mandir}/man8/%{name}.8.gz
 
 
