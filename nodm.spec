@@ -25,7 +25,7 @@ on a regular computer as well, if the security implications are acceptable.
 
 %build
 %configure
-make %{?_smp_mflags}
+make
 
 
 %install
