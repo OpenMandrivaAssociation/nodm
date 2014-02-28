@@ -22,6 +22,7 @@ on a regular computer as well, if the security implications are acceptable.
 
 %prep
 %setup -q
+sed -i 's/-Werror//g' Makefile.*
 
 %build
 %configure
