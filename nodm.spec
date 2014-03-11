@@ -14,6 +14,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  pam-devel
 BuildRequires:  help2man
 BuildRequires:  libtool
+BuildRequires:	pkgconfig(x11)
 
 %description
 An automatic display manager which automatically starts an X session at
