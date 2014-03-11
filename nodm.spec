@@ -3,11 +3,13 @@ Version:        0.11
 Release:        1%{?dist}
 Summary:        A display manager automatically starting an X session
 
-Group:          User Interface/X
+Group:          Graphical desktop/Other
 License:        BSD and GPLv2+
 URL:            http://www.enricozini.org/sw/nodm/
 Source0:        http://www.enricozini.org/sw/%{name}/%{name}_%{version}.orig.tar.gz
-Patch0:         nodm-dso-link-fix.patch
+#Patch0:         nodm-dso-link-fix.patch
+Patch1:		Makefile.am.diff
+Patch2:		Makefile.in.diff
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  pam-devel
@@ -21,7 +23,9 @@ on a regular computer as well, if the security implications are acceptable.
 
 %prep
 %setup -q
-# %patch0 -p1
+#%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 # run autogen.sh since we patch configure.ac
 # but don't run configure twice
@@ -46,12 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING README
 %{_sbindir}/%{name}
-%{_mandir}/man8/%{name}.8.gz
+%{_mandir}/man8/%{name}.8.xz
 
 
 %changelog
-* Sun Feb 14 2010 Sebastian Dziallas <sebastian@when.com> - 0.6-2
-- fix issue with DSO linking thanks to Mathieu Bridon
-
-* Thu Jan 28 2010 Sebastian Dziallas <sebastian@when.com> - 0.6-1
-- initial packaging

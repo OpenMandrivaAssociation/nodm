@@ -1,0 +1,20 @@
+--- nodm-0.11.orig/Makefile.in
++++ nodm-0.11/Makefile.in
+@@ -139,7 +139,7 @@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = @CFLAGS@ -Wall -Werror
++CFLAGS = @CFLAGS@ -Wall
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+@@ -226,7 +226,7 @@
+ libsources = common.c log.c vt.c xsession-child.c xserver.c xsession.c dm.c
+ testlibsources = $(libsources) test.c
+ AM_CPPFLAGS = $(X11_CFLAGS)
+-AM_LDFLAGS = $(PAM_LIBS) $(X11_LIBS)
++LIBS = $(PAM_LIBS) $(X11_LIBS)
+ nodm_SOURCES = $(libsources) nodm.c
+ nodm_CFLAGS = -DNODM_SESSION='"$(sbindir)/nodm"'
+ man_MANS = nodm.8
