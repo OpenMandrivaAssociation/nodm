@@ -7,6 +7,7 @@ Group:          Graphical desktop/Other
 License:        BSD and GPLv2+
 URL:            http://www.enricozini.org/sw/nodm/
 Source0:        http://www.enricozini.org/sw/%{name}/%{name}_%{version}.orig.tar.gz
+Source1:	nodm.pamd
 Patch0:		Makefile.am.diff
 Patch1:		Makefile.in.diff
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
