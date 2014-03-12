@@ -40,6 +40,9 @@ make %{?_smp_mflags}
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
+mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/pam.d
+install -m 644 %{SOURCE1} $RPM_BUILD_ROOT/%{_sysconfdir}/pam.d/%{name}
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING README
 %{_sbindir}/%{name}
+%config(noreplace) %{_sysconfdir}/pam.d/%{name}
 %{_mandir}/man8/%{name}.8.xz
 
 
