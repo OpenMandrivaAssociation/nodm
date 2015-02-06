@@ -3,7 +3,7 @@
 
 Name:           nodm
 Version:        0.11
-Release:        1
+Release:        2
 Summary:        A display manager automatically starting an X session
 
 Group:          Graphical desktop/Other
