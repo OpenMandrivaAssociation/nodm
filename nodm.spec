@@ -8,7 +8,7 @@ Summary:        A display manager automatically starting an X session
 
 Group:          Graphical desktop/Other
 License:        BSD and GPLv2+
-URL:            http://www.enricozini.org/sw/nodm/
+URL:            https://www.enricozini.org/sw/nodm/
 Source0:        http://www.enricozini.org/sw/%{name}/%{name}_%{version}.orig.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
